@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Film Generator</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        .card {
+            background: #1f2937;
+            padding: 25px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+        }
+
+        select {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            margin: 15px 0;
+        }
+
+        button {
+            background: #16a34a;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #15803d;
+        }
+
+        #result {
+            display: none;
+            text-align: left;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎬 AI Film Generator</h1>
+
+    <p class="subtitle">
+        Générateur gratuit de scénarios de films avec intelligence artificielle
+    </p>
+
+    <div class="card">
+
+        <h2>Créer un nouveau film</h2>
+
+        <p>Choisis le thème de ton histoire :</p>
+
+        <select id="theme">
+            <option>Trahison</option>
+            <option>Déception</option>
+            <option>Héritage</option>
+            <option>Vrai amour</option>
+            <option>L'argent du démon</option>
+            <option>Sorcellerie</option>
+            <option>Haine</option>
+            <option>Désespoir</option>
+        </select>
+
+        <button onclick="genererFilm()">
+            🎬 Générer mon film
+        </button>
+
+    </div>
+
+    <div class="card" id="result">
+
+        <h2>🎥 Ton film</h2>
+
+        <p>
+            <strong>Thème :</strong>
+            <span id="themeResult"></span>
+        </p>
+
+        <p>
+            Le générateur de scénario sera bientôt connecté à notre
+            intelligence artificielle.
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+function genererFilm() {
+
+    const theme = document.getElementById("theme").value;
+
+    document.getElementById("themeResult").textContent = theme;
+
+    document.getElementById("result").style.display = "block";
+
+}
+
+</script>
+
+</body>
+          </html>
